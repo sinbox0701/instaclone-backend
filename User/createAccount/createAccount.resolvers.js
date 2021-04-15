@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import client from "../client";
+import client from "../../client";
 
 export default {
     Mutation: {
@@ -36,16 +36,6 @@ export default {
             }catch(e){
                 return e;
             }
-        }
-    },
-    Query:{
-        seeProfile: async (_,args)=>{
-            const {username} = args;
-            return client.user.findUnique({
-                where:{
-                    username
-                }
-            }) 
         }
     }
 }
