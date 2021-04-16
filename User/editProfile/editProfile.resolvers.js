@@ -11,8 +11,11 @@ export default {
             username,
             email,
             password:newPassword,
-            bio
+            bio,
+            avatar
         } = args;
+        const {filename, createReadStream} = await avatar;
+        const stream = createReadStream();
         let uglyPassword = null;
         if (newPassword) {
             uglyPassword = await bcrypt.hash(newPassword, 10);
