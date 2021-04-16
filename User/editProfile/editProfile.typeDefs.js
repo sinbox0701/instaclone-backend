@@ -12,6 +12,7 @@ export default gql`
             lastName:String
             username:String
             email:String
+            bio: String
             password:String
         ):editProfileResult!
     }

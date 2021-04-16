@@ -10,7 +10,8 @@ export default {
             lastName,
             username,
             email,
-            password:newPassword
+            password:newPassword,
+            bio
         } = args;
         let uglyPassword = null;
         if (newPassword) {
@@ -25,6 +26,7 @@ export default {
             lastName,
             username,
             email,
+            bio,
             ...(uglyPassword && { password: uglyPassword }),
             },
         });
