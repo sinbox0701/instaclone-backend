@@ -10,4 +10,17 @@ API
 - [x] Edit Profile
 - [x] Change Avatar
 - [x] Follow User
-- [ ] Unfollow User
+- [x] Unfollow User
+- [ ] See Followers & See Following w/ pagination
+- [ ] Computed Fields
+- [ ] Search Users
+
+## Photos:
+
+- [ ] See Photo
+- [ ] Upload Photo
+- [ ] Like / Unlike Photo
+- [ ] See Photo Likes
+- [ ] See Feed
+- [ ] Search Photos
+- [ ] See Hashtags
