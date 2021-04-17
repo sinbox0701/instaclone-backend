@@ -11,7 +11,8 @@ API
 - [x] Change Avatar
 - [x] Follow User
 - [x] Unfollow User
-- [ ] See Followers & See Following w/ pagination
+- [x] See Followers w/ pagination
+- [ ] See Following w/ pagination
 - [ ] Computed Fields
 - [ ] Search Users
 
