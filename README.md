@@ -8,7 +8,6 @@ API
 - [x] See Profile
 - [x] Login
 - [x] Edit Profile
-- [x] Chang Avatar
-- [ ] Follow User
+- [x] Change Avatar
+- [x] Follow User
 - [ ] Unfollow User
-- [ ] Change Avatar (Image Upload)

@@ -24,7 +24,7 @@ export default {
                     throw new Error("이미 존재하는 사용자입니다.");
                 }
                 const uglyPassword = await bcrypt.hash(password,10);
-                return client.user.create({
+                await client.user.create({
                     data:{
                         username,
                         email,
@@ -33,8 +33,14 @@ export default {
                         password:uglyPassword
                     }
                 })
+                return {
+                    ok:true
+                }
             }catch(e){
-                return e;
+                return {
+                    ok:false,
+                    error:"계정 생성 실패"
+                };
             }
         }
     }
