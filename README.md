@@ -14,14 +14,40 @@ API
 - [x] See Followers w/ pagination
 - [x] See Following w/ pagination
 - [x] Computed Fields
-- [ ] Search Users
+- [x] Search Users
 
-## Photos:
+## Photos
 
+- [ ] Upload Photo (Parse #)
 - [ ] See Photo
-- [ ] Upload Photo
+- [ ] See Hashtag
+- [ ] Search Photos
+- [ ] Edit Photo
 - [ ] Like / Unlike Photo
 - [ ] See Photo Likes
 - [ ] See Feed
-- [ ] Search Photos
-- [ ] See Hashtags
+- [ ] See Photo Comments
+- [ ] Delete Photo
+
+## Comments
+
+- [ ] Comment on Photo
+- [ ] Delete Comment
+- [ ] Edit Comment
+
+## Refactor
+
+- [ ] Mutation Responses
+
+## Extras
+
+- [ ] S3 Image Upload
+
+## DMs
+
+- [ ] See Rooms
+- [ ] Send Message (Create Room)
+- [ ] See Room
+- [ ] Computed Fields
+- [ ] See (Read) Message
+- [ ] Realtime Messages
