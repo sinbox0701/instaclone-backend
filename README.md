@@ -12,7 +12,7 @@ API
 - [x] Follow User
 - [x] Unfollow User
 - [x] See Followers w/ pagination
-- [ ] See Following w/ pagination
+- [x] See Following w/ pagination
 - [ ] Computed Fields
 - [ ] Search Users
 

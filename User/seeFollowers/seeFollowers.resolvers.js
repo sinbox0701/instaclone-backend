@@ -2,7 +2,8 @@ import client from "../../client";
 
 export default {
   Query: {
-    seeFollowers: async (_, { username, page }) => {
+    seeFollowers: async (_, args) => {
+        const { username, page } = args;
         const check = await client.user.findUnique({where:{username},select:{id:true}});
         if(!check){
             return{
