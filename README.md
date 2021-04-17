@@ -13,7 +13,7 @@ API
 - [x] Unfollow User
 - [x] See Followers w/ pagination
 - [x] See Following w/ pagination
-- [ ] Computed Fields
+- [x] Computed Fields
 - [ ] Search Users
 
 ## Photos:
