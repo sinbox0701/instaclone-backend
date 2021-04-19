@@ -24,11 +24,17 @@ export const protectedResolver = (ourResolver) => (
     context,
     info
   ) => {
-    if (!context.loggedInUser) {
-      return {
-        ok: false,
-        error: "Please log in to perform this action.",
-      };
+    if (!context.loggedInUser) {//quert의 return 값은 ok,error로 확신할 수 X --> 따라서 구분 필요
+      const query = info.operation.operation === "query";
+      if(query){
+        return null;
+      }
+      else{
+        return {
+          ok: false,
+          error: "로그인을 먼저 해주세요!",
+        };
+      }
     }
     return ourResolver(root, args, context, info);
   };
