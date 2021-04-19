@@ -20,7 +20,7 @@ API
 
 - [x] Upload Photo (Parse #)
 - [x] See Photo
-- [ ] See Hashtag
+- [x] See Hashtag
 - [ ] Search Photos
 - [ ] Edit Photo
 - [ ] Like / Unlike Photo
