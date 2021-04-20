@@ -1,6 +1,6 @@
 import client from "../../client";
 import { uploadToS3 } from "../../shared/shared.utils";
-import { protectedResolver } from "../../users/users.utils";
+import { protectedResolver } from "../../User/User.utils";
 import { processHashtags } from "../Photo.utils";
 
 export default {
