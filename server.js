@@ -11,12 +11,30 @@ const PORT = process.env.PORT
 const apollo = new ApolloServer({
     typeDefs,
     resolvers,
-    context: async ({req}) => {
-        if(req){
+    context: async (ctx) => {
+        if(ctx.req){//http
             return {
-                loggedInUser:await getUser(req.headers.token)
+                loggedInUser:await getUser(ctx.req.headers.token)
             }
+        }else {//web socket
+            const {
+                connection: { context },
+            } = ctx;
+            return {
+                loggedInUser: context.loggedInUser,
+            };
         }
+    },
+    subscriptions:{//모든 subscription은 private하다는 전제하에
+        onConnect: async ({ token }) => {//params, web socket //user 인증
+            if (!token) {
+              throw new Error("You can't listen.");
+            }
+            const loggedInUser = await getUser(token);
+            return {
+              loggedInUser,//return한 loggedInUser는 context로 감
+            };
+        },
     }
 });
 

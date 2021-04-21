@@ -53,7 +53,7 @@ export default {
                     };
                 }
             }
-            const newMessage = await client.message.create({
+            const message = await client.message.create({
                 data: {
                     payload,
                     room: {
@@ -68,7 +68,7 @@ export default {
                     },
                 },
             });
-            pubsub.publish(NEW_MESSAGE,{roomUpdates:{...newMessage}}); //roomUpdates라는 subscription의 return값으로 newMessage의 데이터를 보낸다
+            pubsub.publish(NEW_MESSAGE,{roomUpdates:{...message}}); //roomUpdates라는 subscription의 return값으로 newMessage의 데이터를 보낸다
             return {
                 ok: true,
             };
