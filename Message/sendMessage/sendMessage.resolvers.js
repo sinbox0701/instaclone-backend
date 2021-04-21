@@ -1,4 +1,6 @@
 import client from "../../client";
+import { NEW_MESSAGE } from "../../constants";
+import pubsub from "../../pubsub";
 import { protectedResolver } from "../../User/User.utils";
 
 export default {
@@ -51,7 +53,7 @@ export default {
                     };
                 }
             }
-            await client.message.create({
+            const newMessage = await client.message.create({
                 data: {
                     payload,
                     room: {
@@ -66,6 +68,7 @@ export default {
                     },
                 },
             });
+            pubsub.publish(NEW_MESSAGE,{roomUpdates:{...newMessage}}); //roomUpdates라는 subscription의 return값으로 newMessage의 데이터를 보낸다
             return {
                 ok: true,
             };
