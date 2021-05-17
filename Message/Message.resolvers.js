@@ -12,7 +12,7 @@ export default {
             if(!loggedInUser){
                 return 0;
             }
-            client.message.count({
+            return client.message.count({
                 where:{
                     read:false,
                     roomId:id,
